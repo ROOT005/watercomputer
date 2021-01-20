@@ -1,0 +1,128 @@
+<view class="selectSection">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <view class="pickerTitle">点击选择断面形式</view>
+    </view>
+  </picker>
+</view>
+
+<view wx:if="{{index== 0}}"> 
+  <view class="type">当前断面形式->{{type}}</view>
+  <!-- 矩形计算公式 -->
+  <view class="input_area">
+      <view class="form-row">
+        <view class="form-title">底宽(b):</view>
+        <view class="form-content"><input name="b" placeholder="请输入底宽b" type="digit" bindinput="bindKeyInputB"></input></view>
+      </view>
+      <view class="form-row">
+        <view class="form-title">水深(h):</view>
+        <view class="form-content"><input name="h" placeholder="水深h" type="digit" bindinput="bindKeyInputH"></input></view>
+      </view>
+  </view>
+</view>
+<view wx:elif="{{index == 1}}" >
+  <view class="type">当前断面形式->{{type}}</view>
+  <view class="input_area">
+      <view class="form-row">
+        <view class="form-title">底宽(b):</view>
+        <view class="form-content"><input name="b" placeholder="请输入底宽b" type="digit" bindinput="bindKeyInputB"></input></view>
+      </view>
+      <view class="form-row">
+        <view class="form-title">水深(h):</view>
+        <view class="form-content"><input name="h" placeholder="请输入水深h" type="digit" bindinput="bindKeyInputH"></input></view>
+      </view>
+      <view class="form-row">
+        <view class="form-title">坡比(m):</view>
+        <view class="form-content"><input name="m" placeholder="请输入坡比m" type="digit" bindinput="bindKeyInputM"></input></view>
+      </view>
+  </view>
+</view>
+<view wx:elif="{{index == 2}}">
+  <view class="type">当前断面形式->{{type}}</view>
+  <view class="form-row">
+    <view class="form-title">底宽(b1):</view>
+    <view class="form-content"><input name="b1" placeholder="请输入底宽b1" type="digit" bindinput="bindKeyInputB1"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">底宽(b2):</view>
+    <view class="form-content"><input name="b2" placeholder="请输入底宽b2" type="digit" bindinput="bindKeyInputB2"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">水深(h):</view>
+    <view class="form-content"><input name="h" placeholder="请输入水深h" type="digit" bindinput="bindKeyInputH"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">底部水深(h1):</view>
+    <view class="form-content"><input name="h1" placeholder="底部水深h1" type="digit" bindinput="bindKeyInputH1"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">底部坡比(m1):</view>
+    <view class="form-content"><input name="m1" placeholder="请输入底部坡比m1" type="digit" bindinput="bindKeyInputM1"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">上部坡比(m2):</view>
+    <view class="form-content"><input name="m2" placeholder="请输入上部坡比m2" type="digit" bindinput="bindKeyInputM2"></input></view>
+  </view>
+</view>
+<view wx:elif="{{index == 3}}"> 
+  <view class="type">当前断面形式->{{type}}</view>
+  <view class="form-row">
+    <view class="form-title">水深(h):</view>
+    <view class="form-content"><input name="h" placeholder="水深h" type="digit" bindinput="bindKeyInputH"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">半径(r):</view>
+    <view class="form-content"><input name="r" placeholder="半径r" type="digit" bindinput="bindKeyInputR"></input></view>
+  </view>
+</view>
+<view wx:elif="{{index == 4}}">
+  <view class="type">当前断面形式->{{type}}</view>
+  <view class="form-row">
+    <view class="form-title">水深(h):</view>
+    <view class="form-content"><input name="h" placeholder="水深h" type="digit" bindinput="bindKeyInputH"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">直径(d):</view>
+    <view class="form-content"><input name="d" placeholder="直径h" type="digit" bindinput="bindKeyInputD"></input></view>
+  </view>
+  <view class="form-row">
+    <view class="form-title">角度(θ):</view>
+    <view class="form-content"><input name="θ" placeholder="角度θ" type="digit" bindinput="bindKeyInputTheta"></input></view>
+  </view>
+</view>
+  <view class="result">
+    <view class="sectionA">
+      <view class="result_title">
+        过水断面面积(A)：
+      </view>
+      <view class="result_infoA">
+      {{infoA}}
+      </view>
+    </view>
+    <view class="sectionX">
+      <view class="result_title">
+        湿周(χ)：
+      </view>
+      <view class="result_infoX">
+        {{infoX}}
+      </view>
+    </view>
+  </view>
+  <view class="result">
+    <view class="sectionR">
+      <view class="result_title">
+        水力半径(R)：
+      </view>
+      <view class="result_infoR">
+        {{infoR}}
+      </view>
+    </view>
+    <view class="sectionB">
+      <view class="result_title">
+        水面宽(B)：
+      </view>
+      <view class="result_infoB">
+        {{infoB}}
+      </view>
+    </view>
+  </view>
